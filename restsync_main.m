@@ -989,7 +989,7 @@ if create_scalars == 1
     end
 end
 
-%% T-tests and RM-ANOVAs for mean inbound/outbound maps
+%% Compare mean inbound/outbound maps
 inbound_table      = cat(2,conv_z2r(squeeze(nanmean(conv_r2z(inbound_mat),2))),netassignments_new);
 inbound_table      = array2table(inbound_table,'VariableNames',{'day1','day2','nets'});
 inbound_table.nets = categorical(inbound_table.nets);
